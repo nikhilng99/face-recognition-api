@@ -18,9 +18,9 @@ const db = knex({
 });
 
 //postgresql-animated-83315
-db.select('*').from('users').then(data => {
+/* db.select('*').from('users').then(data => {
     console.log(data)
-})
+}) */
 
 const app = express()
 app.use(cors())
