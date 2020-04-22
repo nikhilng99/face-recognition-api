@@ -21,7 +21,6 @@ const db = knex({
 db.select('*').from('users').then(data => {
     console.log(data)
 })
-.catch(err=>res.json('error'))
 
 const app = express()
 app.use(cors())
