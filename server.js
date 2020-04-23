@@ -12,11 +12,12 @@ const image = require('./controllers/image')
 const db = knex({
     client: 'pg',
     connection: {
-        connectString: process.env.DATABASE_URL
+        connectString: process.env.DATABASE_URL,
+        ssl:true
     }
 });
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
+//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 
 //postgresql-animated-83315
 /* db.select('*').from('users').then(data => {
